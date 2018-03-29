@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Mar 29 12:30:15 CEST 2018
+#Thu Mar 29 12:32:43 CEST 2018
 60.set=ASSET
 52.set=ANDROID_RESOURCE
 53.base=/home/kollhran/cordovaChombart/platforms/android/app/build/intermediates/assets/debug

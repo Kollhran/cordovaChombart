@@ -32,7 +32,7 @@
 				function onSuccess(contacts) {
 				    for (var i = 0; i < contacts.length; i++) {
 						document.getElementById('listC').innerHTML += "<div class='contact'><h2>" 
-						+ contacts[i].displayName + contacts[i].phoneNumbers[0] + "</h2><a href='tel:" + contacts[i].phoneNumbers[0].value + "'><img  src='img/phone.png' class='imgC'></a><img src='img/suppr.png' class='imgC'></div>";
+						+ contacts[i].displayName + "</h2><a href='tel:" + contacts[i].phoneNumbers[0].value + "'><img  src='img/phone.png' class='imgC'></a><img src='img/suppr.png' class='imgC'></div>";
 					
 				    }
 			};
