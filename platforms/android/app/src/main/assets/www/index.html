@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr" manifest="horsligne.appcache">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+		<title>Paladins : Le futur du jeu vidéale</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/script.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script>
+		document.addEventListener("deviceready", onDeviceReady, false);
+		
+		
+		function checkConnection() {
+   				var networkState = navigator.connection.type;
+
+    			var states = {};
+   				states[Connection.UNKNOWN]  = 'Unknown connection';
+    			states[Connection.ETHERNET] = 'Ethernet connection';
+    			states[Connection.WIFI]     = 'WiFi connection';
+    			states[Connection.CELL_2G]  = 'Cell 2G connection';
+    			states[Connection.CELL_3G]  = 'Cell 3G connection';
+    			states[Connection.CELL_4G]  = 'Cell 4G connection';
+    			states[Connection.CELL]     = 'Cell generic connection';
+    			states[Connection.NONE]     = 'No network connection';
+    		alert('Connection type: ' + states[networkState]);
+			}
+			
+			function infDevice(){
+				var modele = device.model;
+				var vversion = device.version;
+				var uid = device.uuid;
+				//var batt = status.level;
+				alert('Modèle : ' + modele + '\n Version : ' + vversion + '\n UUID : ' + uid);
+				navigator.globalization.getPreferredLanguage(
+    function (language) {alert('language: ' + language.value + '\n');},
+    function () {alert('Error getting language\n');}
+);
+				/*if(batt<=20){
+					if(!status.isPlugged){
+						alert(' Batterie : ' + batt + '% \n branche mon gars');
+					}else{
+						alert(' Batterie : ' + batt + '% \n En charge');
+					}
+					
+				}else{
+					alert(' Batterie : ' + batt + '%' + '\n trankille frere pour la batterie');
+				}*/
+			}
+		function onDeviceReady() {
+    			checkConnection();
+    			infDevice();
+		}
+
+			
+
+		</script>	
+		<script src="js/script.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+		<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="img/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<header>
+			<img id="menu" class="fermer" src="img/menu.png" alt="Menu">
+		<img id="logo" src="img/logo.png" alt="Logo du jeu Paladins">
+		<img id="phone" src="img/phone.png" alt="Appeler">
+		
+		<ul id="header" class="invisible">
+			<li id="gauche"><a href="index.html">Accueuil</a></li>
+			<li><a href="contact.html">Champions</a></li>
+			<li><a href="index.html">Profil</a></li>
+			<li><a href="index.html">Contact</a></li>
+			<li id="droite"><input type="text" placeholder="Rechercher"></li>
+		</ul>
+	</header>
+	<article>
+	<img id="entete" src="img/header.jpg" alt="En tete présentant des personnages du jeu Paladins">
+		<h1>Qu'est ce que Paladins ?</h1>
+		<p>Paladins est FPS multijoueur en équipe bien que le studio Hi-Rez ai ajouté la possibilité de jouer à la 3ème personne. Les équipes sont composées de 5 champions chacune et les joueurs doivent se partager 4 rôles: Flanc,Soutien,Tank et Dégâts. Il existe 3 modes de jeu : Siège(chaque équipe doit prendre une place centrale puis pousser une charge jusque dans la base adverse jusqu'a ce que l'une des deux atteigne 4 point : +1 pour la prise de la place, +1 pour avoir pousser la charge dans le camp adverse, +1 pour avoir réussi à résisté aux ennemis), Charge (chaque doit a son tour pousser une charge le plus loin possible en un minimum de temps , ici il n'y a que 2 manches) et Assault(Un match à mort en équipe ou il faut atteindre les 400 points en tuant les adversaire et en controlant une place). 34 champions sont disponibles et le jeu est gratuit mais des pack sont vendus afin d'améliorer le visuel du jeu et non les compétences(Skin isn't skill)<p>
+	</article>
+	<body>
+		
+		<ul id="corps">
+			<li>
+				<img class="titree" src="img/imageTitre.jpg" alt="Image de titre">
+				<a href="index.html">Gameplay</a>
+				<p>Malgré un Gameplay assez simple et très similaire à OverWatch, Paladins a su tirer son épingle du jeu et proposer des innovations dans le déroulement des parties afin de dynamiser le jeu et garder</p><p>...</p>
+			</li><li>
+				<img class="titree" src="img/imageTitre2.jpeg" alt="Image de titre">
+				<a href="index.html">Base du jeu</a>
+				<p>Dans cette section, vous allez apprendre les bases du jeu et certaines mécaniques qui pourrait vous sauvez la vie en plein Team Fight ou encore en Un contre Un. Néanmoins le skill vient en jouant et la théorie</p><p>...</p>
+			</li><li>
+				<img class="titree" src="img/imageTitre4.png" alt="Image de titre">
+				<a href="index.html">Compétitions</a>
+				<p>Paladins est un nouveau jeu sur la scène de la compétition, n'atteyant pas le niveau de stream de League of Legends il prend de plus en plus d'ampleur et continue à augmenter son nombre de joueurs </p><p>...</p>
+			</li><li>
+				<img class="titree" src="img/imageTitre3.jpg" alt="Image de titre">
+				<a href="index.html">Communauté Française</a>
+				<p>Souvent considérée comme toxique, la communauté du jeu vidéo français redore son blason grâce à Paladins. En effet, celle ci est très active et fair-play dans le jeu n'hésitant pas à donner des conseils et à garder </p><p>...</p>
+			</li>
+		</ul>
+			<div id="maps">
+			<h2>Localisation du siège social de Hi-Rez : développeur de Paladins</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.343872068105!2d-84.2529887853526!3d34.061654124682676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f59fcaba6a4239%3A0xe39ae9579d8f6f5!2sBrookside+Pkwy%2C+Alpharetta%2C+GA+30022%2C+%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1518789445222"  frameborder="0" style="border:0" allowfullscreen></iframe></div><form>
+			<h2> Formulaire d'inscription à la news Letter</h2>
+			<div id="centrage">
+			<div id="liste">
+			<ul class="prenomNaiss">
+				<li><input type="text" placeholder="Prénom" name="prenom"></li><li>
+				<input type="date" name="born"></li>
+			</ul>
+			<ul class="nomVille">
+				<li><input type="text" placeholder="Nom" name="nom"></li><li>
+				<input type="text" placeholder="Ville de naissance" name="villene"></li>
+			</ul>
+			</div>
+			<input type="email" placeholder="Adresse mail" name="mail"  class="suite">
+			<input type="file" name="photo" accept="image/*" class="suite">
+			<textarea name="commentaire" class="suite" id="commentaire" placeholder="Un commentaire?"></textarea>
+			<input type="submit" name="envoyer" class="suite" value="Envoyer" id="submit">
+			</div>
+		</form>
+	</body>
+	<footer>
+		<p> Chombart Félix TP C</p>
+	</footer>
+</html>

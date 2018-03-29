@@ -1,0 +1,272 @@
+#logo{
+	width:10%;
+}
+#contact{
+	width:50%;
+	display:inline-block;
+}
+
+#button{
+	margin-left:15%;
+	margin-right:15%;
+	margin-top:10%;
+	width:20%;
+	display:inline-block;
+}
+
+#contact{
+	vertical-align:top;
+}
+#entete{
+	margin-top:1%;
+	width:100%;
+}
+#header{
+	display:inline-block;
+	float:right;
+}
+#header li{
+	display:inline-block;
+	border-left: 1px solid black;
+}
+#menu,#phone{
+	display:none;
+}
+header{
+	border-bottom:2px solid black;
+}
+
+header #droite{
+	border-left:none;
+}
+header li a{
+	font-size:1.5vw;
+	padding:4px;
+	color:green;
+	text-decoration:none;
+	transition-property:color;
+	transition-duration:1s;
+}
+
+header li a:hover{
+	color:#2aee30;
+}
+
+header #gauche{
+	border-left:none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#corps li{
+	display:inline-block;
+	width:25%;
+}
+
+li img {
+    border-radius: 50%;
+}
+
+#corps{
+	text-align:center;
+	padding:0px;
+}
+
+article h1{
+	font-size:3.5vw;
+}
+
+#corps li a{
+	color:black;
+	font-size:2vw;
+	display:block;
+}
+
+#corps li p{
+	width:50%;
+	margin:auto;
+}
+
+#corps li a:hover{
+	color:#082bc6;
+}
+
+.titree{
+	width:50%;
+}
+
+#maps iframe{
+	width:100%;
+	height:300px;
+}
+
+#maps{
+	display:inline-block;
+	width:50%;
+	border-right: 1px solid black;	
+}
+
+form{
+	vertical-align:top;
+	display:inline-block;
+	width:49%;
+	
+}
+
+form ul{
+	list-style:none;
+	display:inline-block;
+	width:40%;
+	padding:0;
+}
+
+form ul input{
+	width:95%;
+}
+
+#liste{
+	width:80%;
+	margin:auto;
+}
+form .suite{
+	width:63%;
+	margin-left:10%;
+	margin-bottom:2%;
+}
+form #commentaire{
+	height:50px;
+}
+
+form #submit{
+	margin-left:67%;
+	width:25%;
+}
+h2{
+	text-align:center;
+}
+
+footer{
+	border-top:2px solid black;
+}
+
+footer p{
+	float:right;
+	font-size:0.8vw;
+}
+/*MEDIA QUERIES POUR LES TABLETTES*/
+@media screen and (max-width: 1024px){
+	#header{
+		float:none;
+		padding:0;
+		text-align:center;
+		display:block;
+	}
+	#corps li{
+		width:50%;
+	}
+	#logo{
+		width:50%;
+		margin-left:25%;
+	}
+	form ul{
+	list-style:none;
+	display:block;
+	margin:auto;
+	width:100%;
+	}
+	form ul input{
+		width:100%;
+	}
+	
+	form .suite{
+		width:80%;
+	}
+	form .nomVille{
+	float:none;
+	}
+}
+/*MEDIA QUERIES POUR LES SMARTPHONES*/
+@media screen and (max-width: 450px){
+	html{
+		width:100%;
+	}
+	#corps li{
+		width:100%;
+	}
+	
+	form{
+		width:90%;
+		display:block;
+		border-left:none;
+		margin:auto;
+	}
+	#corps li a{
+		font-size:7vw;
+	}
+	#maps{
+		width:100%;
+		display:block;
+		border-right:none;
+		border-bottom:2px solid black;
+	}
+	
+	#logo{
+		width:50%;
+		display:block;
+		margin:auto;
+	}
+	form ul{
+		list-style:none;
+		display:block;
+		width:100%;
+		padding:0;
+		margin:auto;
+	}
+
+	footer p{
+		font-size:3vw;
+	}
+form ul li input{
+	width:100%;
+	}
+form .nomVille{
+	float:none;
+}
+
+#header.invisible{
+	display:none;
+}
+
+#header.vueMenu{
+	display:block;
+}
+
+#header.vueMenu li{
+	display:block;
+	border-left:none;
+}
+
+#header.vueMenu li a{
+	font-size:6vw;
+}
+article h1{
+	font-size:6.5vw;
+}
+
+#menu{
+	display:block;
+	position:absolute;
+	top:4%;
+	left:1%;
+	width:15%;
+}
+#phone{
+	display:block;
+	position:absolute;
+	top:4%;
+	right:1%;
+	width:15%;
+}
+}
