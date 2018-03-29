@@ -13,7 +13,7 @@
 	<header>
 		<img id="menu" class="fermer" src="img/menu.png" alt="Menu">
 		<img id="logo" src="img/logo.png" alt="Logo du jeu Paladins">
-		<img id="phone" src="img/phone.png" alt="Appeler">
+		<a href='tel:0638693330'><img id="phone" src="img/phone.png" alt="Appeler"></a>
 		
 		<ul id="header" class="invisible">
 			<li id="gauche"><a href="index.html">Accueuil</a></li>
@@ -23,5 +23,36 @@
 			<li id="droite"><input type="text" placeholder="Rechercher"></li>
 		</ul>
 	</header>
-	<h1 id="contact">Mes contacts</h1><img id="button" src="img/add.jpg" alt="ajouter contact"><div id="remplissage">
+	<body>
+		<h1 id="contact">Mes contacts</h1><img id="button" src="img/add.jpg" alt="ajouter contact"><div id="remplissage">
+	
+		<script>
+			document.addEventListener("deviceready", onDeviceReady,false);
+			function onDeviceReady(){
+				function onSuccess(contacts) {
+				    for (var i = 0; i < contacts.length; i++) {
+						document.getElementById('listC').innerHTML += "<div class='contact'><h2>" 
+						+ contacts[i].displayName + contacts[i].phoneNumbers[0].value + "</h2><a href='tel:" + contacts[i].phoneNumbers[0] + "'><img  src='img/phone.png' class='imgC'></a><img src='img/suppr.png' class='imgC'></div>";
+					
+				    }
+			};
+
+			function onError(contactError) {
+			    alert('onError!');
+			};
+
+			// find all contacts
+			var options = new ContactFindOptions();
+			options.filter = "";
+			options.multiple = true;
+			var filter = ["displayName", "addresses"];
+			navigator.contacts.find(filter, onSuccess, onError, options);
+			}
+		</script>
+		<div id="listC">
+		</div>
+	</body>
+	<footer>
+		<p> Chombart Félix TP C</p>
+	</footer>
 </html>

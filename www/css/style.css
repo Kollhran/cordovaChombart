@@ -5,6 +5,18 @@
 	width:50%;
 	display:inline-block;
 }
+.contact h2,.imgC{
+	display:inline-block;
+	vertical-align:middle;
+}
+.contact h2{
+	color:red;
+	width:50%;
+}
+
+.imgC{
+	width:25%;
+}
 
 #button{
 	margin-left:15%;
